@@ -1,16 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { EmailService } from 'src/email/email.service';
 
 @Injectable()
 export class StudentsService {
-  constructor(private readonly emailService: EmailService) {}
-  
-  sendEmail() {
-    //HERE WE CAN USE this.emailService to send email to specific student
+  constructor() {
+    console.log('[StudentsService] instance is created')
   }
 
   findAll(){
-    //RETURN LIST OF STUDENTS
     return []
   }
 }

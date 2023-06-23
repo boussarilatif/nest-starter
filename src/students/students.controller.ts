@@ -1,9 +1,11 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { StudentsService } from './students.service';
 
 @Controller('students')
 export class StudentsController {
-  constructor(private studentsService: StudentsService) {}
+  constructor(private studentsService: StudentsService) {
+    console.log('[StudentsController] instance is created')
+  }
 
   @Get()
   findAll() {
